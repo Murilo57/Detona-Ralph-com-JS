@@ -41,9 +41,6 @@ function countDown() {
     }
 }
 
-//Qual o conceito de um Listener?
-//É uma função que fica 'ouvindo' uma ação, onde você associa a um evento e ele fica esperando para executar alguma ação
-
 //Função para pegar um quadrado aleatorio que ira receber o inimigo
 function randomSquare() {
 
@@ -70,6 +67,9 @@ function moveEnemy() {
         //setInterval é uma função de intervalo, estou chamando a função randomSquare no parametro pra ele trocar o Ralph de lugar de 1 em 1 segundo
         state.values.timerId = setInterval(randomSquare, state.values.gameVelocity)
 }
+
+//Qual o conceito de um Listener?
+//É uma função que fica 'ouvindo' uma ação, onde você associa a um evento e ele fica esperando para executar alguma ação
 
 //Função para se o click for em cima do inimigo ele ira somar 1 ponto 
 function addListenerHitBox() {
