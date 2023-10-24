@@ -3,6 +3,7 @@
     display: flex; /*Display: flex serve para deixar os elementos dentro dessa classe um ao lado do utro */
     flex-direction: column; /*Para deixar os elementos dentro da div 'Container' como colunarias*/
     height: 100vh; /*Para todos os elementos ocuparem 100% do tamanho*/
+    background-image: url("../images/wall.png");
 }
 
 /*Classe para o menu onde fica sobre vida, pontuação, etc*/
@@ -16,6 +17,7 @@
     width: 100%;
     background-color: #000000;
     color: #ffffff;
+    border-bottom: 5px solid gold;
 }
 
 /*Classe onde agrupa os quadrados */
@@ -24,7 +26,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid red;
 }
 
 /*Classe dos quadrados*/
@@ -32,4 +33,24 @@
     height: 150px;
     width: 150px;
     border: 1px solid black;
+    background-color: #1aeaa5;
+}
+
+/*Classe do primeiro quadrado onde sera dinamico para a visualização do inimigo */
+.enemy {
+    background-image: url("../images/ralph.png");
+    background-size: cover; /*serve para ele completar toda a caixa*/
+}
+
+/*Classe onde fica a foto do jogador e a quantidade de vida*/
+.menu-lives {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Classe para os segundos <h2> onde contem o tempo e score*/
+.menu-time h2:nth-child(2), /*Aqui eu procuro um h2 que seja o segundo filho dele*/
+.menu-score h2:nth-child(2){
+    margin-top: 1rem;
 }
