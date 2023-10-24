@@ -7,7 +7,10 @@ const state = {
         timeLeft: document.querySelector("#time-left"), //Tempo
         score : document.querySelector("#score") //Pontuação
     },
-    values: {},
+    values: {
+        timerId: null, //Id dinamico que ser trocado na função moveEnemy()
+        gameVelocity: 1000 //valor definido de intervalo da setInterval da função moveEnemy
+    },
 };
 
 //Qual o conceito de um Listener?
@@ -34,7 +37,8 @@ function randomSquare() {
 
 //Função que move a imagem do inimigo de quadrado a outro
 function moveEnemy() {
-    
+        //setInterval é uma função de intervalo, estou chamando a função randomSquare no parametro pra ele trocar o Ralph de lugar de 1 em 1 segundo
+        state.values.timerId = setInterval(randomSquare, state.values.gameVelocity)
 }
 
 
@@ -49,7 +53,7 @@ function addListenerHitBox() {
 //Função de inicio onde sera chamada outras funções ao iniciar o jogo 
 function initialize() {
 
-    randomSquare()
+    moveEnemy()
 
 }
 
