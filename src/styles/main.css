@@ -1,0 +1,35 @@
+/*Folha da estilo principal*/
+.container {
+    display: flex; /*Display: flex serve para deixar os elementos dentro dessa classe um ao lado do utro */
+    flex-direction: column; /*Para deixar os elementos dentro da div 'Container' como colunarias*/
+    height: 100vh; /*Para todos os elementos ocuparem 100% do tamanho*/
+}
+
+/*Classe para o menu onde fica sobre vida, pontuação, etc*/
+.menu {
+    display: flex;
+    justify-content: space-evenly; /*Dando um espaço eventual*/
+    align-items: center;
+
+    /*Passar os tamanhos para os elementos serem ajustados pois as vezes ele ficam quebrados pela falta dos tamanhos declarados*/
+    height: 90px;
+    width: 100%;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+/*Classe onde agrupa os quadrados */
+.panel {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid red;
+}
+
+/*Classe dos quadrados*/
+.square {
+    height: 150px;
+    width: 150px;
+    border: 1px solid black;
+}

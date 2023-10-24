@@ -1,0 +1,8 @@
+/*Sempre zerar a margin e padding de todo o arquivo para não dar diferença em browsers diferentes*/
+* {
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box; /*Medir a borda de ponta  a ponta sem contar as margins*/
+    /* font-family: "Bebas Neue", sans-serif; */
+    font-family: "Press Start 2P", cursive;
+}
