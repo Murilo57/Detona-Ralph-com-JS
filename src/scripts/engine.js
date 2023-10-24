@@ -21,6 +21,13 @@ const state = {
     }
 };
 
+//Função para adicionar audio 
+function playSound() {
+    let audio = new Audio("./src/audios/hit.m4a") //Arquivo do audio
+    audio.volume = 0.2 //Mudando o valor do volume do audio
+    audio.play(); //Função de dar play ao audio
+}
+
 //Função para decrementar o tempo
 function countDown() {
     state.values.currentTime--;
@@ -73,6 +80,7 @@ function addListenerHitBox() {
                 state.values.result++
                 state.view.score.textContent = state.values.result
                 state.values.hitPosition = null
+                playSound()
             }
         })
     })
